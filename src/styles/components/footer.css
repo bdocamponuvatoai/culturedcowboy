@@ -106,6 +106,17 @@
   margin-left: auto;
 }
 
+.footer-credit a {
+  color: var(--on-night);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.footer-credit a:hover {
+  color: var(--brass-light);
+}
+
 /* Oversized tone-on-tone wordmark resting on the bottom edge (text supplied by CSS). */
 .site-footer .footer-wordmark {
   margin-top: clamp(24px, 4vw, 56px);

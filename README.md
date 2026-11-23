@@ -143,6 +143,10 @@ up for Vercel: `vercel.json` adds security headers (`X-Content-Type-Options`, `R
 
 <!-- deployment section is completed after the first deploy -->
 
+## Credits
+
+Design and build by [Nuvato](https://nuvato.ai/). The footer credit links there (configured in `src/config/site.ts`).
+
 ## Follow-ups
 
 - **Real photography.** The three lifestyle images are AI-generated (labelled on the site); the catalogue photos are

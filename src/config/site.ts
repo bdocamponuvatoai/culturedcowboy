@@ -19,6 +19,8 @@ export const site = {
   directionsUrl:
     "https://www.google.com/maps/search/?api=1&query=Cultured+Cowboy+1521+Bypass+72+NE+Greenwood+SC",
   originalCatalogueUrl: "https://culturedcowboy.com/",
+  /** Studio credit shown in the footer; always links to the studio's own site. */
+  credit: { name: "Nuvato", url: "https://nuvato.ai/" },
 } as const;
 
 export type NavLink = { label: string; href: string };

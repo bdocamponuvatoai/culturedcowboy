@@ -59,7 +59,13 @@ export function Footer() {
           <a href={site.originalCatalogueUrl} target="_blank" rel="noreferrer">
             Original catalogue
           </a>
-          <span className="footer-credit">Design concept by Nuvato</span>
+          <span className="footer-credit">
+            {"Design concept by "}
+            {/* noopener (not noreferrer) so visits still show as referrals in the studio's analytics. */}
+            <a href={site.credit.url} target="_blank" rel="noopener">
+              {site.credit.name}
+            </a>
+          </span>
         </div>
       </div>
       {/* Decorative: the text comes from CSS, so it is not read out or contrast-checked. */}
