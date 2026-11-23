@@ -1,0 +1,51 @@
+:root {
+  /* Surfaces */
+  --bone: #f6f2eb;
+  --bone-2: #ede7dd;
+  --bone-3: #e3dbcd;
+  --white: #fffdf9;
+  --night: #161814;
+  --night-2: #1f221d;
+  --night-3: #2a2e27;
+
+  /* Text */
+  --ink: #1c1a16;
+  --ink-2: #3b3731;
+  --muted: #6b645a;
+  --on-night: #f3eee6;
+  --on-night-muted: #b5ada0;
+
+  /* Lines */
+  --line: #ddd5c8;
+  --line-strong: #c4b9a7;
+  --line-night: #3a3e36;
+
+  /* Accents (from the brand mark) */
+  --saddle: #8b432c;
+  --saddle-dark: #6c321f;
+  --brass: #c18d64;
+  --brass-light: #e2c9a6;
+  --sage: #3f5235;
+
+  /* Type */
+  --display: var(--font-display), Georgia, "Times New Roman", serif;
+  --sans: var(--font-dm-sans), Arial, sans-serif;
+
+  /* Layout */
+  --max: 1440px;
+  --gutter: clamp(20px, 4vw, 56px);
+  --header-h: 84px;
+  --section: clamp(72px, 9vw, 136px);
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  color-scheme: light;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --header-h: 64px;
+  }
+}

@@ -1,0 +1,239 @@
+/* A warm backdrop that catalogue photos sit on. Photos are shown at most a little past their real
+   size (they are small originals), so they stay sharp and read as a styled still life. */
+.stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(120% 90% at 50% 38%, var(--white) 0%, transparent 70%),
+    var(--bone-2);
+  overflow: hidden;
+}
+
+.stage img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 48px 24px;
+}
+
+.product-card {
+  position: relative;
+}
+
+.product-card__frame {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card__media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 5;
+  padding: 14%;
+  background:
+    radial-gradient(120% 90% at 50% 38%, var(--white) 0%, transparent 72%),
+    var(--bone-2);
+}
+
+.section--tint .product-card__media {
+  background:
+    radial-gradient(120% 90% at 50% 38%, var(--white) 0%, transparent 72%),
+    var(--bone-3);
+}
+
+.product-card__img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transition:
+    transform 0.9s var(--ease-out),
+    opacity 0.5s var(--ease);
+}
+
+.product-card__img--alt {
+  position: absolute;
+  inset: 14%;
+  width: auto;
+  height: auto;
+  max-width: 72%;
+  max-height: 72%;
+  margin: auto;
+  opacity: 0;
+}
+
+.product-card:hover .product-card__img {
+  transform: scale(1.05);
+}
+
+.product-card:hover .product-card__img--alt {
+  opacity: 1;
+}
+
+.product-card:hover
+  .product-card__img:not(.product-card__img--alt):has(
+    + .product-card__img--alt
+  ) {
+  opacity: 0;
+}
+
+.product-card__body {
+  padding-top: 18px;
+}
+
+.product-card__brand {
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.product-card__name {
+  font-family: var(--display);
+  font-size: 1.45rem;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.005em;
+}
+
+.product-card__name a {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0% 1px
+    no-repeat;
+  transition: background-size 0.45s var(--ease);
+}
+
+.product-card__name a:hover {
+  background-size: 100% 1px;
+}
+
+.product-card__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+/* Quick add: a bar that rises on hover; a round button on touch screens. */
+.quick-add {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  background: var(--ink);
+  color: var(--bone);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.35s var(--ease),
+    transform 0.45s var(--ease-out),
+    background-color 0.25s;
+}
+
+.quick-add:hover:not(:disabled) {
+  background: var(--saddle);
+}
+
+.quick-add[data-added] {
+  background: var(--sage);
+}
+
+.product-card:hover .quick-add,
+.quick-add:focus-visible,
+.quick-add[data-added] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (hover: none) {
+  .quick-add {
+    left: auto;
+    right: 10px;
+    bottom: 10px;
+    width: 44px;
+    min-height: 44px;
+    border-radius: 50%;
+    opacity: 1;
+    transform: none;
+  }
+
+  .quick-add span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+}
+
+.catalogue-note {
+  margin-top: 40px;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  max-width: 44rem;
+}
+
+@media (max-width: 1100px) {
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .product-grid {
+    gap: 32px 12px;
+  }
+
+  .product-card__body {
+    padding-top: 12px;
+  }
+
+  .product-card__name {
+    font-size: 1.2rem;
+  }
+
+  .product-card__meta {
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 6px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Several catalogue photos were shot on a light beige sweep. A gentle lift turns that sweep white,
+   so the multiply blend dissolves it into the stage instead of leaving a visible box. */
+.stage img,
+.product-card__img,
+.category-tile__stage img,
+.bag-line__media img,
+.search-result__media img,
+.gallery__thumbs img {
+  filter: brightness(1.1) contrast(1.05);
+}

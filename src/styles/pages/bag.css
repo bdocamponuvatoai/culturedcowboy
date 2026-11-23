@@ -1,0 +1,132 @@
+.bag-page {
+  padding-bottom: var(--section);
+}
+
+.bag-page__head {
+  padding-block: clamp(48px, 7vw, 96px) clamp(32px, 4vw, 56px);
+}
+
+.bag-page__head .lead {
+  margin-top: 20px;
+}
+
+.bag-loading {
+  padding: 80px 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+.bag-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(320px, 1fr);
+  gap: clamp(40px, 6vw, 96px);
+  align-items: start;
+}
+
+.bag-list {
+  border-top: 1px solid var(--ink);
+}
+
+.bag-list__count {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.bag-list .catalogue-note {
+  margin: 24px 0 20px;
+}
+
+.inquiry-card {
+  position: sticky;
+  top: calc(var(--header-h) + 24px);
+  padding: clamp(28px, 3vw, 40px);
+  background: var(--white);
+  border: 1px solid var(--line);
+  min-width: 0;
+}
+
+.inquiry-card .eyebrow {
+  margin-bottom: 14px;
+}
+
+.inquiry-card h2 {
+  font-size: clamp(2.4rem, 3vw, 3rem);
+}
+
+.inquiry-card > p {
+  margin: 12px 0 26px;
+}
+
+.inquiry-card form {
+  margin-top: 4px;
+}
+
+.inquiry-card .btn--block {
+  margin-top: 6px;
+}
+
+.inquiry-card__alts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 28px;
+  margin-top: 20px;
+}
+
+.inquiry-card__fine {
+  margin-top: 16px;
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.inquiry-card__phone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.inquiry-card__phone .micro {
+  color: var(--muted);
+}
+
+.inquiry-card__number {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--display);
+  font-size: 1.7rem;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.inquiry-card__number svg {
+  color: var(--saddle);
+}
+
+.inquiry-card__phone:hover .inquiry-card__number {
+  color: var(--saddle);
+}
+
+@media (max-width: 900px) {
+  .bag-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .inquiry-card {
+    position: static;
+  }
+}
+
+/* A heading for structure, styled as a small label. */
+h2.bag-list__count {
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  line-height: 1.5;
+  letter-spacing: 0.16em;
+}

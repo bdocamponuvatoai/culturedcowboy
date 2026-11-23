@@ -1,0 +1,281 @@
+/* About: story */
+
+.story__body p + p {
+  margin-top: 18px;
+}
+
+.story__lede {
+  font-family: var(--display);
+  font-size: clamp(1.7rem, 2.4vw, 2.2rem);
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.story__body .text-link {
+  margin-top: 30px;
+}
+
+/* Visit */
+.visit__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(32px, 6vw, 96px);
+  align-items: start;
+}
+
+.visit-place {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: var(--night-2);
+}
+
+.visit-place__map {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 260px;
+  padding: 40px 20px;
+  color: var(--brass-light);
+  text-align: center;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 39px,
+      rgb(243 238 230 / 0.07) 39px 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 39px,
+      rgb(243 238 230 / 0.07) 39px 40px
+    ),
+    radial-gradient(60% 70% at 50% 50%, var(--night-3), var(--night-2));
+}
+
+.visit-place__star {
+  color: var(--brass);
+  margin-bottom: 8px;
+}
+
+.visit-place__town {
+  font-family: var(--display);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  letter-spacing: 0.08em;
+  line-height: 1;
+  color: var(--on-night);
+}
+
+.visit-place__motto {
+  margin-top: 18px;
+  color: var(--on-night-muted);
+}
+
+.visit-place__body {
+  padding: clamp(28px, 4vw, 48px);
+  border-top: 1px solid var(--line-night);
+}
+
+.visit-place__body h2 {
+  font-size: clamp(2.2rem, 3.4vw, 3.2rem);
+  line-height: 1.05;
+  color: var(--on-night);
+}
+
+.visit-place__body p {
+  margin: 18px 0 28px;
+}
+
+.contact-list {
+  border-top: 1px solid var(--ink);
+}
+
+.contact-item {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 20px;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-item > svg {
+  color: var(--saddle);
+  margin-top: 2px;
+}
+
+.contact-item .eyebrow {
+  margin-bottom: 10px;
+}
+
+.contact-item__value {
+  display: inline-block;
+  font-family: var(--display);
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  transition: color 0.2s;
+}
+
+.contact-item__value:hover,
+.contact-item__value a:hover {
+  color: var(--saddle);
+}
+
+.contact-item__email {
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  overflow-wrap: anywhere;
+}
+
+.contact-item__title {
+  font-family: var(--display);
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.contact-item p {
+  margin-top: 12px;
+}
+
+.contact-item .text-link {
+  margin-top: 18px;
+}
+
+/* How to order / Fit guide */
+.steps--cards .step {
+  display: flex;
+  flex-direction: column;
+}
+
+.steps--cards .step .eyebrow {
+  margin-bottom: 12px;
+}
+
+.step__title {
+  font-size: clamp(2rem, 2.6vw, 2.5rem);
+}
+
+.steps--cards .step p {
+  flex: 1;
+  margin-bottom: 26px;
+}
+
+.note-panel {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: clamp(28px, 6vw, 96px);
+  align-items: center;
+  padding: clamp(32px, 5vw, 64px);
+  background: var(--bone-2);
+  border-left: 3px solid var(--saddle);
+}
+
+.note-panel h2 {
+  font-size: clamp(2.2rem, 3.4vw, 3.2rem);
+}
+
+.note-panel p {
+  font-size: 1.0625rem;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.guide-card {
+  padding: clamp(28px, 4vw, 52px);
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.guide-card > svg {
+  color: var(--saddle);
+  margin-bottom: 26px;
+}
+
+.guide-card .eyebrow {
+  margin-bottom: 12px;
+}
+
+.guide-card h2 {
+  font-size: clamp(2.2rem, 3.2vw, 3rem);
+  margin-bottom: 20px;
+}
+
+.guide-card p + p {
+  margin-top: 14px;
+}
+
+.guide-card .text-link {
+  margin-top: 28px;
+}
+
+/* Legal */
+.legal {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: clamp(32px, 6vw, 96px);
+  padding-block: clamp(56px, 8vw, 112px) var(--section);
+}
+
+.legal__head {
+  position: sticky;
+  top: calc(var(--header-h) + 32px);
+  align-self: start;
+}
+
+.legal__body h2 {
+  margin: 36px 0 12px;
+  font-family: var(--sans);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+.legal__body h2:first-child {
+  margin-top: 0;
+}
+
+.legal__body p {
+  line-height: 1.8;
+  max-width: 42rem;
+}
+
+/* 404 */
+.not-found {
+  padding-block: clamp(80px, 12vw, 160px);
+}
+
+.not-found__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.not-found__star {
+  color: var(--saddle);
+  margin-bottom: 28px;
+}
+
+.not-found .lead {
+  margin-top: 22px;
+}
+
+@media (max-width: 900px) {
+  .visit__grid,
+  .note-panel,
+  .guide-grid,
+  .legal {
+    grid-template-columns: 1fr;
+  }
+
+  .legal__head {
+    position: static;
+  }
+}

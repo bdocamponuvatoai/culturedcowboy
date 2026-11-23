@@ -1,0 +1,274 @@
+.skip-link {
+  position: fixed;
+  left: 16px;
+  top: -100px;
+  z-index: 100;
+  padding: 12px 18px;
+  background: var(--ink);
+  color: var(--bone);
+  font-size: 0.875rem;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+/* Announcement */
+.announcement {
+  background: var(--night);
+  color: var(--on-night);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+}
+
+.announcement__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 38px;
+  padding-inline: var(--gutter);
+  max-width: 1720px;
+  margin-inline: auto;
+}
+
+.announcement p {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+}
+
+.announcement p svg {
+  color: var(--brass);
+}
+
+.announcement a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.announcement a:hover {
+  opacity: 1;
+}
+
+/* Brand wordmark */
+.brand {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.brand__name {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 4px;
+  font-family: var(--display);
+  font-size: 1.9rem;
+  letter-spacing: -0.01em;
+}
+
+.brand__star {
+  width: 13px;
+  height: 13px;
+  margin-top: 2px;
+  color: var(--saddle);
+}
+
+.brand__tag {
+  margin-top: 7px;
+  font-size: 0.5625rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--bone) 96%, transparent);
+  backdrop-filter: saturate(1.4) blur(14px);
+  -webkit-backdrop-filter: saturate(1.4) blur(14px);
+  border-bottom: 1px solid var(--line);
+  transition:
+    background-color 0.4s var(--ease),
+    color 0.4s var(--ease),
+    border-color 0.4s var(--ease);
+}
+
+/* Home page: the header floats over the hero until the visitor scrolls. */
+.site-header[data-overlay] {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom-color: color-mix(in srgb, var(--on-night) 18%, transparent);
+  color: var(--on-night);
+}
+
+.site-header[data-overlay] .brand__star {
+  color: var(--brass);
+}
+
+.site-header__inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  height: var(--header-h);
+  padding-inline: var(--gutter);
+  max-width: 1720px;
+  margin-inline: auto;
+}
+
+.site-header__start {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-header__end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+}
+
+.menu-btn {
+  display: none;
+  margin-left: -10px;
+}
+
+.primary-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.primary-nav a {
+  position: relative;
+  padding-block: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.primary-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s var(--ease);
+}
+
+.primary-nav a:hover::after,
+.primary-nav a[aria-current="page"]::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.wordmark-link {
+  display: block;
+}
+
+.bag-count {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  display: grid;
+  place-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--saddle);
+  color: var(--white);
+  font-size: 0.625rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.bag-count[data-empty] {
+  transform: scale(0);
+}
+
+@media (max-width: 1100px) {
+  .menu-btn {
+    display: inline-grid;
+  }
+
+  .primary-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .announcement__inner {
+    justify-content: center;
+    min-height: 34px;
+    font-size: 0.6875rem;
+  }
+
+  .announcement a {
+    display: none;
+  }
+
+  .site-header__inner {
+    gap: 8px;
+    padding-inline: 12px;
+  }
+
+  .brand__name {
+    font-size: 1.55rem;
+  }
+
+  .brand__star {
+    width: 11px;
+    height: 11px;
+  }
+
+  .brand__tag {
+    margin-top: 5px;
+    font-size: 0.5rem;
+    letter-spacing: 0.18em;
+  }
+
+  .header-phone {
+    display: none;
+  }
+
+  .site-header__end .icon-btn {
+    width: 40px;
+  }
+}
+
+@media (max-width: 370px) {
+  .brand__name {
+    font-size: 1.35rem;
+  }
+
+  .brand__tag {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .announcement__place {
+    display: none;
+  }
+}

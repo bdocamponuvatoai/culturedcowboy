@@ -1,0 +1,67 @@
+[
+  {
+    "path": "src/assets/images/products/rw7001.jpg",
+    "source": "https://culturedcowboy.com/boots/RWatson/images/RW7001-Lg.jpg",
+    "bytes": 96050
+  },
+  {
+    "path": "src/assets/images/products/rwl8400.jpg",
+    "source": "https://culturedcowboy.com/boots/RWatson/images/RW-8400-1-LeftAnglePr.jpg",
+    "bytes": 219583
+  },
+  {
+    "path": "src/assets/images/products/rwl8400-detail.jpg",
+    "source": "https://culturedcowboy.com/boots/RWatson/images/RW-8400-1-RightAngle.jpg",
+    "bytes": 116723
+  },
+  {
+    "path": "src/assets/images/products/skyline.jpg",
+    "source": "https://culturedcowboy.com/hats/stetson/images/felt/SFSKYL-754007.jpg",
+    "bytes": 497178
+  },
+  {
+    "path": "src/assets/images/products/skyline-detail.jpg",
+    "source": "https://culturedcowboy.com/hats/stetson/images/felt/SFSKYL-754022.jpg",
+    "bytes": 178750
+  },
+  {
+    "path": "src/assets/images/products/el-patron.jpg",
+    "source": "https://culturedcowboy.com/hats/stetson/images/felt/SFEPTN-4840BS.jpg",
+    "bytes": 763528
+  },
+  {
+    "path": "src/assets/images/products/schott118.jpg",
+    "source": "https://culturedcowboy.com/cc_rider/schott/images/118.jpg",
+    "bytes": 180845
+  },
+  {
+    "path": "src/assets/images/products/schott141.jpg",
+    "source": "https://culturedcowboy.com/cc_rider/schott/images/141.jpg",
+    "bytes": 178592
+  },
+  {
+    "path": "src/assets/images/products/cinch-black.jpg",
+    "source": "https://culturedcowboy.com/cinch/images/MT10320083BLK.jpg",
+    "bytes": 92125
+  },
+  {
+    "path": "src/assets/images/products/cinch-white.jpg",
+    "source": "https://culturedcowboy.com/cinch/images/MT10320020WHT.jpg",
+    "bytes": 103554
+  },
+  {
+    "path": "src/assets/images/brands/stetson.jpg",
+    "source": "https://culturedcowboy.com/hats/stetson/images/felt/StetLogo.jpg",
+    "bytes": 37528
+  },
+  {
+    "path": "src/assets/images/brands/schott.gif",
+    "source": "https://culturedcowboy.com/cc_rider/schott/images/schottlogo.gif",
+    "bytes": 4272
+  },
+  {
+    "path": "src/assets/images/brands/cinch.gif",
+    "source": "https://culturedcowboy.com/cinch/images/cinchlogo.gif",
+    "bytes": 15125
+  }
+]

@@ -1,0 +1,26 @@
+/*
+ * Global styles. Base layers first (tokens, element defaults, type, layout), then components,
+ * sections and page-specific styles. Components use their own class names, so later files only
+ * refine earlier ones where a page deliberately overrides a component.
+ */
+@import "./base/tokens.css";
+@import "./base/base.css";
+@import "./base/typography.css";
+@import "./base/layout.css";
+
+@import "./components/buttons.css";
+@import "./components/header.css";
+@import "./components/sheet.css";
+@import "./components/product-card.css";
+@import "./components/forms.css";
+@import "./components/misc.css";
+@import "./components/footer.css";
+
+@import "./sections/hero.css";
+@import "./sections/home.css";
+@import "./sections/shared.css";
+
+@import "./pages/catalogue.css";
+@import "./pages/product.css";
+@import "./pages/bag.css";
+@import "./pages/content.css";

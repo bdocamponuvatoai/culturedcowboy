@@ -1,0 +1,103 @@
+.display,
+h1,
+h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(3.1rem, 6.6vw, 6.4rem);
+}
+
+h2 {
+  font-size: clamp(2.5rem, 4.6vw, 4.4rem);
+}
+
+h1 em,
+h2 em,
+.display em {
+  font-style: italic;
+  color: var(--saddle);
+}
+
+/* The italic phrase of a headline sits on its own line, the house rhythm since the original site. */
+h1 em,
+h2 em,
+.display em {
+  display: block;
+}
+
+/* Short headlines ("Your picks.") keep the accent on the same line. */
+.heading--inline em,
+.heading--inline.display em {
+  display: inline;
+}
+
+h3 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.005em;
+}
+
+p {
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.lead {
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--ink-2);
+  max-width: 34rem;
+}
+
+.eyebrow {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: var(--saddle);
+  margin-bottom: 22px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.7;
+}
+
+.on-night .eyebrow,
+.eyebrow.on-night {
+  color: var(--brass);
+}
+
+.micro {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.on-night {
+  color: var(--on-night);
+}
+
+.on-night p {
+  color: var(--on-night-muted);
+}
+
+.on-night h1 em,
+.on-night h2 em {
+  color: var(--brass-light);
+}
